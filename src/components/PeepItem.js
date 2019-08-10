@@ -12,7 +12,7 @@ export class PeepItem extends Component {
 
             <div className="w3-container">
             <p>{this.props.peep.updated_at}</p>
-            <p><Link to="/">see more...</Link></p>
+            <p><Link to="/1">see more...</Link></p>
             </div>
             </div>
         )
