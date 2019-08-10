@@ -14,7 +14,7 @@ componentDidMount() {
 }
   render() {
     return this.state.peeps.map((peep) => (
-        <PeepItem peep={peep}/>
+        <PeepItem key={peep.id} peep={peep}/>
     ));
   }
 }

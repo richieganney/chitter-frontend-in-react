@@ -1,3 +1,25 @@
+Chitter API Frontend Challenge
+==============================
+
+# Challenge:
+
+We are going to write a small Twitter clone that will allow the users to post messages to a public stream.
+
+The scenario is similar to the Chitter Challenge, except someone has already built a backend API for you and hosted it on Heroku.
+
+The task is to build a front-end single-page-app to interface with this API. You can do this in any framework you like, or in pure Javascript. The API documentation is here.
+
+Here are some interactions the API supports. Implement as many as you see fit.
+
+- Creating Users
+- Logging in
+- Posting Peeps
+- Viewing all Peeps (start here) ✅
+- Viewing individual Peeps
+- Deleting Peeps
+- Liking Peeps
+- Unliking Peeps
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
