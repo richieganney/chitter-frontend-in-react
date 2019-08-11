@@ -9,12 +9,13 @@ export class Peeps extends Component {
 
 // viewing peeps
 componentDidMount() {
-    axios.get('https://chitter-backend-api.herokuapp.com/peeps')
+    axios.get(`https://chitter-backend-api.herokuapp.com/peeps`)
     .then(res => this.setState({ peeps: res.data }))
 }
   render() {
     return this.state.peeps.map((peep) => (
         <PeepItem key={peep.id} peep={peep}/>
+        
     ));
   }
 }

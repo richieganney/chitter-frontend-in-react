@@ -7,12 +7,13 @@ export class ViewPeep extends Component {
         singlePeep: []
       }
     componentDidMount() {
-        axios.get('https://chitter-backend-api.herokuapp.com/peeps/900')
+        console.log('LOOK BELOW')
+        console.log(this.props)
+        var url = "https://chitter-backend-api.herokuapp.com/peeps"
+        axios.get(url)
         .then(res => this.setState({ singlePeep: res.data }))
-    }
+      }
     render() {
-        console.log('look')
-        console.log(this.state.singlePeep.user)
         return (
             <div className="w3-card-4">
 
