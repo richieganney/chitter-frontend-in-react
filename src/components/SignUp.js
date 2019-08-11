@@ -2,19 +2,29 @@ import React, { Component } from 'react'
 import axios from 'axios';
 
 export default class SignUp extends Component {
-    state = {
-        username: '',
-        password: ''
-      }
+        state = {
+          username: '',
+          password: ''
+        }
 
-  
+            handlePasswordChange = event => {
+                this.setState({password: event.target.value})
+              }
+            
+            handleUsernameChange = event => {
+                this.setState({username: event.target.value})
+            }
 
-    // componentDidMount() {
-    //     axios.post("https://chitter-backend-api.herokuapp.com/users",
-    //     { user }
-    //     )
-    //     .then(res => console.log(res.data))
-    // }
+            handleSubmit = event => {
+                event.preventDefault()
+                console.log("look here")
+                axios.post(
+                'https://chitter-backend-api.herokuapp.com/users',
+                {"user": {"handle":this.state.username, "password":this.state.password}}
+            )
+            .then(res => this.setState({ peeps: res.data }))
+        }
+
     render() {
         return (
             <div className="container" align="center">
@@ -23,9 +33,9 @@ export default class SignUp extends Component {
             <form >
               <label>
                 username:
-                <input type="text" name="username" /><br></br><br></br>
+                <input autoComplete="on" onChange={this.handleUsernameChange} type="text" name="username" /><br></br><br></br>
                 Password:
-                <input type="password" name="password" />
+                <input autoComplete="on" onChange={this.handlePasswordChange} type="password" name="password" />
               </label><br></br>
               <button type="submit">Submit</button>
             </form><br></br><br></br>

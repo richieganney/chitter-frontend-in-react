@@ -7,8 +7,6 @@ export class ViewPeep extends Component {
         singlePeep: []
       }
     componentDidMount() {
-        console.log('LOOK BELOW')
-        console.log(this.props)
         var url = "https://chitter-backend-api.herokuapp.com/peeps"
         axios.get(url)
         .then(res => this.setState({ singlePeep: res.data }))

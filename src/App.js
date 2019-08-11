@@ -6,6 +6,7 @@ import About from './components/pages/About'
 import Header from './components/layout/Header'
 import ViewPeep from './components/ViewPeep';
 import SignUp from './components/SignUp'
+import Login from './components/Login'
 
 function App() {
 
@@ -29,6 +30,12 @@ function App() {
         <Route path="/sign-up" render={props => (
           <React.Fragment>
             <SignUp />
+          </React.Fragment>
+        )} />
+
+        <Route path="/login" render={props => (
+          <React.Fragment>
+            <Login />
           </React.Fragment>
         )} />
 

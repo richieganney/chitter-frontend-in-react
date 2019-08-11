@@ -16,7 +16,7 @@ Here are some interactions the API supports. Implement as many as you see fit.
 - Posting Peeps
 - Viewing all Peeps (start here) ✅
 - Viewing individual Peeps
-- Deleting Peeps
+- Deleting Peeps 
 - Liking Peeps
 - Unliking Peeps
 

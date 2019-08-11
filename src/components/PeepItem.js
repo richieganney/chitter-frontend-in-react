@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 export class PeepItem extends Component {
     render() {
+        console.log(this.props.peep.user)
         return (
         <div className="w3-card-4">
 
